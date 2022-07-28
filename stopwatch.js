@@ -1,13 +1,13 @@
-var hour=0;
-var min=0;
-var sec=0;
-var last=0;
-var timer=false;
-var buttons=document.querySelectorAll('button');
+let hour=0;
+let min=0;
+let sec=0;
+let last=0;
+let timer=false;
+let buttons=document.querySelectorAll('button');
 buttons.forEach(function(btn){
     btn.addEventListener("click", function (e) {
         // console.log(e.currentTarget.dataset);
-        var category = e.currentTarget.id;
+        let category = e.currentTarget.id;
         console.log(category);
         if(category=='start'){
             timer=true;
@@ -37,10 +37,13 @@ function stopwatch(){
         if(last==100){
             sec++;
             last=0;
+            
+
         }
         if(sec==60){
             min++;
             sec=0;
+            
         }
         if(min==60){
             hour++;
@@ -59,10 +62,10 @@ function stopwatch(){
         document.getElementById("last").innerHTML="00";
 
         }
-        var newhour=hour;
-        var newmin=min;
-        var newsec=sec;
-        var newlast=last;
+        let newhour=hour;
+        let newmin=min;
+        let newsec=sec;
+        let newlast=last;
         if(hour<10){
             newhour="0"+newhour;
         }
