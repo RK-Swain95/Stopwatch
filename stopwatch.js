@@ -47,6 +47,18 @@ function stopwatch(){
             min=0;
             sec=0;
         }
+        if(hour===24){
+            timer=false;
+            hour=0;
+            min=0;
+            sec=0;
+            last=0;
+            document.getElementById("hour").innerHTML="00";
+        document.getElementById("min").innerHTML="00";
+        document.getElementById("sec").innerHTML="00";
+        document.getElementById("last").innerHTML="00";
+
+        }
         var newhour=hour;
         var newmin=min;
         var newsec=sec;
